@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* CSS tambahan untuk mengatur layout */
+      .container {
+        display: flex;
+        flex-direction: column; /* Mengatur arah flex menjadi kolom */
+        align-items: center; /* Memusatkan konten */
+        text-align: center; /* Memusatkan teks */
+      }
+
+      .content {
+        display: flex; /* Menampilkan konten dalam satu baris */
+        align-items: flex-start; /* Menyelaraskan konten di bagian atas */
+        margin-top: 20px; /* Jarak atas dari judul */
+      }
+
+      .photo-frame {
+        margin-right: 20px; /* Jarak antara foto dan teks */
+        flex-shrink: 0; /* Mencegah foto menyusut */
+      }
+
+      .photo-frame img {
+        max-width: 250px; /* Mengatur lebar maksimum gambar lebih besar */
+        height: auto; /* Memastikan tinggi proporsional */
+        border-radius: 10px; /* Menambahkan sudut melengkung jika diinginkan */
+      }
+
+      .message {
+        max-width: 500px; /* Membatasi lebar paragraf */
+        text-align: left; /* Menjaga teks rata kiri */
+      }
+
+      /* Media Query untuk perangkat kecil */
+      @media (max-width: 768px) {
+        .content {
+          flex-direction: column; /* Mengubah arah flex menjadi kolom pada perangkat kecil */
+          align-items: center; /* Memusatkan konten */
+        }
+
+        .photo-frame {
+          margin-right: 0; /* Menghapus margin pada perangkat kecil */
+          margin-bottom: 20px; /* Menambahkan jarak bawah antara foto dan teks */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Music -->
+    <audio id="birthday-audio" loop>
+      <source
+        src="Add-on/Music/(Synthesia) Romantic Happy Birthday (arr. Miranda Wong) _ Piano Cover by Seander Alfonsus.mp3"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio tag.
+    </audio>
+
+    <!-- Play Button -->
+    <button id="play-button">Play Music</button>
+
+    <!-- Main Content -->
+    <div class="container">
+      <h1>
+        Happy Birthday <br />
+        Riham Marhamah Kartono!
+      </h1>
+      <div class="content">
+        <div class="photo-frame">
+          <img id="photo" src="Add-on/Image/ayangg (1 of 1).jpg" alt="Your photo here" />
+        </div>
+        <div class="message">
+          <p>
+            Selamat Ulang tahun sayangkuuu, selamat bertambahnya usia babyy ga kerasa yah sekarang babbyy udah 20 tahun,
+            semoga cita - cita yang babbyy impikan tercapai dan semoga babbyy selalu diberikan kesehatan dari Allah SWT, Aaamiin.
+            Semoga baby bisa menjadi seseorang yang lebih baik lagi dari sebelumnya babbyy.
+          </p>
+          <br />
+          <p>
+            ada sedikit pesan buat babyy dari aku. Aku sangat bersyukur bisa bersama babbyy dari dulu awal kita pacaran hingga saat ini, tak ada sedikitpun
+            perasaan penyesalan dari aku karena sudah bisa bersama sama kamu, aku sangat beruntung dirayakan sama kamu, aku sangat beruntung sekali bisa selalu sama
+            kamu
+          </p>
+          <p>
+            yah walaupun kita sudah sering berantem dan pernah putus sambung didalam hubungan ini dan aku tau dari banyaknya pertengkaran kita
+            aku penyebabnya, tapi kamu masih ingin bertahan sama aku ntah karena aku atau kamu sendiri yang menginginkannya tapi aku sudah bersyukur
+            karena kamu bisa tetap bertahan sama aku, aku sangat beruntung dirayakan sama kamu, aku sangat beruntung sekali bisa selalu sama kamu
+          </p>
+          <br />
+          <p>
+            yah hanya itu yang aku ingin sampaikan saat ini, ini adalah hari babyy ini hari ulang tahun babbyy Happy Birthday babbyy cayangkuuu.
+          </p>
+          <p>
+            Sekali lagi terima kasih dan sehat selalu lah babyy karena kamu satu - satu nya didunia ini dan didunia aku ini.
+          </p>
+          <br />
+          <p>Happy birthday iammm, I love you so much!!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2024 Birthday project. All rights reserved. | Made with ❤️
+        exclusively for a Riham Marhamah Kartono!
+      </p>
+    </footer>
+
+    <!-- JS for audio play -->
+    <script>
+      const audio = document.getElementById("birthday-audio");
+      const playButton = document.getElementById("play-button");
+
+      playButton.addEventListener("click", () => {
+        audio.play();
+        playButton.style.display = "none"; // Sembunyikan tombol setelah diklik
+      });
+    </script>
+  </body>
+</html>
